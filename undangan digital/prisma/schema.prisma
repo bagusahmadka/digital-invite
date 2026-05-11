@@ -1,0 +1,26 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model GuestWish {
+  id        String   @id @default(cuid())
+  name      String
+  message   String
+  createdAt DateTime @default(now())
+}
+
+model Rsvp {
+  id        String   @id @default(cuid())
+  name      String
+  status    String   // "Hadir", "Tidak Hadir", "Masih Ragu"
+  guestCount Int     @default(1)
+  phone     String?
+  createdAt DateTime @default(now())
+}

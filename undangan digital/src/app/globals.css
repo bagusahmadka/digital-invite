@@ -1,0 +1,125 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ivory: #FFFFF0;
+  --color-cream: #FFFDD0;
+  --color-champagne: #F7E7CE;
+  --color-gold-metallic: #D4AF37;
+  --color-dark-brown: #3E2723;
+  --color-soft-beige: #F5F5DC;
+  --color-elegant-black: #1A1A1A;
+
+  --font-serif-primary: var(--font-playfair);
+  --font-serif-secondary: var(--font-cormorant);
+  --font-sans: var(--font-poppins);
+
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-fade-up: fade-up 1s ease-out forwards;
+  --animate-gold-glow: gold-glow 4s ease-in-out infinite;
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+  }
+
+  @keyframes fade-up {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes gold-glow {
+    0%, 100% { filter: drop-shadow(0 0 5px rgba(212, 175, 55, 0.3)); }
+    50% { filter: drop-shadow(0 0 20px rgba(212, 175, 55, 0.6)); }
+  }
+}
+
+:root {
+  --background: #FFFFF0;
+  --foreground: #1A1A1A;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  overflow-x: hidden;
+}
+
+@layer base {
+  h1, h2, h3, h4 {
+    font-family: var(--font-playfair);
+  }
+  
+  p, span, div {
+    font-family: var(--font-cormorant);
+  }
+
+  .font-poppins {
+    font-family: var(--font-poppins);
+  }
+}
+
+@layer utilities {
+  .text-gold {
+    background: linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .bg-paper-texture {
+    background-image: url("https://www.transparenttextures.com/patterns/paper-fibers.png");
+  }
+
+  .bg-batik-pattern {
+    background-image: url("https://www.transparenttextures.com/patterns/natural-paper.png");
+  }
+
+  .glass-panel {
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+  }
+
+  .text-gold-solid {
+    color: #D4AF37;
+  }
+
+  .bg-gold {
+    background-color: #D4AF37;
+  }
+
+  .border-gold {
+    border-color: #D4AF37;
+  }
+
+  .text-black-elegant {
+    color: #1A1A1A;
+  }
+
+  .font-playfair {
+    font-family: var(--font-playfair);
+  }
+
+  .font-cormorant {
+    font-family: var(--font-cormorant);
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FFFFF0;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D4AF37;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #BF953F;
+}
+
