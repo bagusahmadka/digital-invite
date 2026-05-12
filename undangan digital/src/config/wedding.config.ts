@@ -25,7 +25,7 @@ export const weddingConfig: WeddingConfig = {
     groom: {
       fullName: "Danang Hadi Setiawan, S.M",
       shortName: "Danang",
-      photo: "/images/groom.png",
+      photo: "/foto_co.png",
       parentLabel: "PUTRA DARI",
       parents: "Bapak Agus Tri Mulyanto & Ibu Jumitri",
       instagram: "@danang",
@@ -33,7 +33,7 @@ export const weddingConfig: WeddingConfig = {
     bride: {
       fullName: "Arlina",
       shortName: "Alin",
-      photo: "/images/bride.png",
+      photo: "/foto_ce.png",
       parentLabel: "PUTRI DARI",
       parents: "Bapak Murgiyono & Ibu Merdeka Wati",
       instagram: "@arlina",
@@ -86,7 +86,7 @@ export const weddingConfig: WeddingConfig = {
   },
 
   assets: {
-    heroBackground: "/images/hero-bg.png",
+    heroBackground: "/hero_bg.png",
     ornament: "/images/ornament.png",
   },
 
